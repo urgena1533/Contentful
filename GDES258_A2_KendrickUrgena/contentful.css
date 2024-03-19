@@ -1,0 +1,173 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Contentful styles */
+section#sustainable-living {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.entry-div {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.entry-div:hover {
+  transform: translateY(-5px);
+}
+
+.entry-div h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px;
+}
+
+.entry-div p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 15px 10px;
+}
+
+.entry-div a {
+  font-size: 16px;
+  color: #1c1c1c;
+  margin: 0 15px 10px;
+}
+
+.entry-div h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 15px;
+}
+
+.entry-div img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+
+  .entry-div {
+      width: calc(50% - 20px);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .menu li {
+      margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .entry-div {
+      width: calc(100% - 20px);
+  }
+}
+
